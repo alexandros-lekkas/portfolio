@@ -4,8 +4,8 @@ import Markdown from "react-markdown";
 
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/project-card";
-import { ResumeCard } from "@/components/resume-card";
+import { ProjectCard } from "@/components/display/project-card";
+import { ResumeCard } from "@/components/display/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 
@@ -15,7 +15,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 /**
  * The home page component. Special thanks to MagicUI for the base design!
- * 
+ *
  * @returns The home page component.
  */
 export default function Page() {
@@ -47,7 +47,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      
+
       {/* About */}
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
@@ -141,9 +141,9 @@ export default function Page() {
                   Check out my latest work
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
+                  I&apos;ve worked on a variety of projects, from simple Java
+                  applications to full-stack web applications. Here are some of
+                  my favorites.
                 </p>
               </div>
             </div>
