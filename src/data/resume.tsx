@@ -6,11 +6,10 @@ export const DATA = {
   initials: "AL",
   url: "https://alexandroslekkas.com",
   location: "Chicago IL / Athens, Greece",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "Computer Science Student & UChicago | Aspiring Software Engineer & Entrepreneur",
+    "Computer Science Student & UChicago - Aspiring Software Engineer & Entrepreneur",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "As someone passionate about technology, I am always looking for ways to learn and grow. I am a Computer Science student at the University of Chicago, and I am always looking for ways to apply my knowledge in the real world. I am passionate about software engineering, entrepreneurship, and technology in general. I am always looking for ways to learn and grow, and I am always looking for ways to apply my knowledge in the real world.",
   avatarUrl: "/me.jpeg",
   skills: [
     "React",
