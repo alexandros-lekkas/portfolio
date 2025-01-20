@@ -145,6 +145,9 @@ export default function Page() {
                   applications to full-stack web applications. Here are some of
                   my favorites.
                 </p>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Some projects that are under wraps are not listed here, so this part may look a little bare (for now). 😅🤫
+                </p>
               </div>
             </div>
           </BlurFade>
@@ -185,7 +188,7 @@ export default function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat?{" "}
                 <Link
-                  href={"DATA.contact.social.X.url"}
+                  href={"mailto:alexandros.lekkas@outlook.com"}
                   className="text-blue-500 hover:underline"
                 >
                   Just shoot me an email
