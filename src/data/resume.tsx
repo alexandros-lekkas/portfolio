@@ -7,9 +7,9 @@ export const DATA = {
   url: "https://alexandroslekkas.com",
   location: "Chicago IL / Athens, Greece",
   description:
-    "Computer Science Student & UChicago - Aspiring Software Engineer & Entrepreneur",
+    "CS Student @ UChicago - Aspiring Software Engineer & Entrepreneur",
   summary:
-    "As someone passionate about technology, I am always looking for ways to learn and grow. I am a Computer Science student at the University of Chicago, and I am always looking for ways to apply my knowledge in the real world. I am passionate about software engineering, entrepreneurship, and technology in general. I am always looking for ways to learn and grow, and I am always looking for ways to apply my knowledge in the real world.",
+    "I'm a Computer Science student at the University of Chicago, passionate about combining software development with entrepreneurship.",
   avatarUrl: "/me.jpeg",
   skills: [
     "React",
@@ -154,7 +154,7 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "https://github.com/alexandros-lekkas/ib-ia-valuator/tree/master",
+          href: "https://github.com/alexandros-lekkas/ib-ia-valuator",
           icon: <Icons.github className="size-3" />,
         },
       ],
