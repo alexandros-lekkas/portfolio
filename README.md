@@ -1,6 +1,6 @@
 # Portfolio 👋
 
-My web portfolio built in React and NextJS.
+My portfolio built in Next, React, & with the help of ShadCN & MagicUI.
 
 ## Where can I see it? 🤔
 
