@@ -64,3 +64,7 @@ export const CommitHeatmap = memo(({ commits }: CommitHeatmapProps) => {
     </div>
   );
 });
+
+// ✅ Set a display name for ESLint & React DevTools
+CommitHeatmap.displayName = "CommitHeatmap";
+

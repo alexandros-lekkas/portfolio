@@ -47,7 +47,9 @@ async function fetchCommits() {
 export default async function StatsPage() {
   const commits = await fetchCommits();
 
-  return <>
-  <CommitHeatmap commits={commits} />
-  </>;
+  return (
+    <>
+      <CommitHeatmap commits={commits} />
+    </>
+  );
 }
