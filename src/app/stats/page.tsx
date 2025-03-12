@@ -1,3 +1,6 @@
+"use client";
+
+import React from "react";
 import { CommitHeatmap } from "./commits";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
@@ -45,7 +48,11 @@ async function fetchCommits() {
 }
 
 export default async function StatsPage() {
-  const commits = await fetchCommits();
+  const [commits, setCommits] = React.useState([]);
+
+  React.useEffect(() => {
+    fetchCommits().then((data) => setCommits(data));
+  }, []);
 
   return (
     <>
