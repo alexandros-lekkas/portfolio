@@ -14,7 +14,7 @@ interface CommitHeatmapProps {
   commits: Commit[];
 }
 
-const CommitHeatmap = memo(({ commits }: CommitHeatmapProps) => {
+export const CommitHeatmap = memo(({ commits }: CommitHeatmapProps) => {
   const [hoveredCommit, setHoveredCommit] = useState<Commit | null>(null);
 
   // Define grid layout (7 days per row like GitHub)
@@ -64,5 +64,3 @@ const CommitHeatmap = memo(({ commits }: CommitHeatmapProps) => {
     </div>
   );
 });
-
-export default CommitHeatmap;

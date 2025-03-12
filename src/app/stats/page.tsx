@@ -1,4 +1,4 @@
-import CommitHeatmap from "./commits";
+import { CommitHeatmap } from "./commits";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
