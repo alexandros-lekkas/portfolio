@@ -1,3 +1,10 @@
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 async function fetchCommits() {
@@ -32,7 +39,7 @@ async function fetchCommits() {
   }
 
   const data = await response.json();
-  console.log(data)
+
   return data.data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
     (week: any) =>
       week.contributionDays.map((day: any) => ({
@@ -55,22 +62,40 @@ export async function Commits() {
   startDate.setDate(today.getDate() - 52 * 7);
 
   return (
-    <div className="grid grid-cols-52 gap-1">
+    <div className="flex flex-row flex-wrap gap-1 p-4 border dark:bg-white rounded-xl">
       {Array.from({ length: 52 * 7 }, (_, i) => {
-      const currentDate = new Date(startDate);
-      currentDate.setDate(startDate.getDate() + i);
-      const dateString = currentDate.toISOString().split("T")[0];
+        const currentDate = new Date(startDate);
+        currentDate.setDate(startDate.getDate() + i);
+        const dateString = currentDate.toISOString().split("T")[0];
 
-      const commit = commitMap.get(dateString);
-      const backgroundColor = commit ? commit.color : "#ebedf0";
+        const commit = commitMap.get(dateString);
+        return (
+          <TooltipProvider key={dateString}>
+            <Tooltip>
+              <TooltipTrigger>
+                <div
+                  className={`w-4 h-4 rounded-md transition-all duration-150 cursor-pointer`}
+                  style={{
+                    backgroundColor: commit
+                      ? commit.color // Use GitHub's commit color if available
+                      : "var(--no-commit-color)", // Fallback color for no commits
+                  }}
+                />
+              </TooltipTrigger>
 
-      return (
-        <div
-        key={dateString}
-        className="w-3 h-3 sm:w-4 sm:h-4 rounded-md transition-all duration-150 cursor-pointer"
-        style={{ backgroundColor }}
-        ></div>
-      );
+              <TooltipContent>
+                {commit ? (
+                  <div>
+                    <div>{commit.count} commits</div>
+                    <div>{dateString}</div>
+                  </div>
+                ) : (
+                  <div>No commits</div>
+                )}
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        );
       })}
     </div>
   );
