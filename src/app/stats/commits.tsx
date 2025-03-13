@@ -22,13 +22,7 @@ interface Commit {
 }
 
 async function fetchCommits() {
-  const response = await fetch("https://api.github.com/graphql", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(`
+  const query = `
     query {
       user(login: "alexandros-lekkas") {
         contributionsCollection {
@@ -44,7 +38,15 @@ async function fetchCommits() {
         }
       }
     }
-  `),
+  `;
+
+  const response = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query }),
   });
 
   if (!response.ok) {
@@ -70,7 +72,7 @@ export async function Commits() {
   const commits = await fetchCommits();
 
   return (
-    <div className="flex flex-row flex-wrap">
+    <div className="flex flex-row flex-wrap gap-1">
       {commits.map((commit: Commit) => {
         const backgroundClass =
           commit.color && githubColorMap[commit.color]
