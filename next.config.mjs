@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ['i.gyazo.com'],
   },
+  env: {
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+  },
 };
 
 export default nextConfig;

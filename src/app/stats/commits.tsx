@@ -1,70 +1,77 @@
-"use client";
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
-import { memo } from "react";
-import { useState } from "react";
+async function fetchCommits() {
+  const query = `
+    query {
+      user(login: "alexandros-lekkas") {
+        contributionsCollection {
+          contributionCalendar {
+            weeks {
+              contributionDays {
+                date
+                contributionCount
+                color
+              }
+            }
+          }
+        }
+      }
+    }`;
 
-// Define props for the component
-interface Commit {
-  date: string;
-  count: number;
-  color?: string;
+  const response = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch commits");
+  }
+
+  const data = await response.json();
+  console.log(data)
+  return data.data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
+    (week: any) =>
+      week.contributionDays.map((day: any) => ({
+        date: day.date,
+        count: day.contributionCount,
+        color: day.color,
+      }))
+  );
 }
 
-interface CommitHeatmapProps {
-  commits: Commit[];
-}
+export async function Commits() {
+  const commits = await fetchCommits();
+  console.log(commits);
+  const commitMap = new Map(
+    commits.map((commit: any) => [commit.date, commit])
+  );
 
-export const CommitHeatmap = memo(({ commits }: CommitHeatmapProps) => {
-  const [hoveredCommit, setHoveredCommit] = useState<Commit | null>(null);
-
-  // Define grid layout (7 days per row like GitHub)
-  const weeks = 52;
-  const daysInWeek = 7;
-
-  // Convert commits to a map for quick lookup
-  const commitMap = new Map(commits.map((commit) => [commit.date, commit]));
-
-  // Generate grid for 52 weeks x 7 days
   const today = new Date();
   const startDate = new Date();
-  startDate.setDate(today.getDate() - weeks * daysInWeek);
+  startDate.setDate(today.getDate() - 52 * 7);
 
-  const gridCells = [];
-  for (let i = 0; i < weeks * daysInWeek; i++) {
-    const currentDate = new Date(startDate);
-    currentDate.setDate(startDate.getDate() + i);
-    const dateString = currentDate.toISOString().split("T")[0];
+  return (
+    <div className="grid grid-cols-52 gap-1">
+      {Array.from({ length: 52 * 7 }, (_, i) => {
+      const currentDate = new Date(startDate);
+      currentDate.setDate(startDate.getDate() + i);
+      const dateString = currentDate.toISOString().split("T")[0];
 
-    // Get commit info for this date
-    const commit = commitMap.get(dateString);
-    const backgroundColor = commit ? commit.color || "#216e39" : "#ebedf0"; // Default GitHub colors
+      const commit = commitMap.get(dateString);
+      const backgroundColor = commit ? commit.color : "#ebedf0";
 
-    gridCells.push(
-      <div
+      return (
+        <div
         key={dateString}
         className="w-3 h-3 sm:w-4 sm:h-4 rounded-md transition-all duration-150 cursor-pointer"
         style={{ backgroundColor }}
-        onMouseEnter={() => setHoveredCommit(commit || null)}
-        onMouseLeave={() => setHoveredCommit(null)}
-      ></div>
-    );
-  }
-
-  return (
-    <div className="flex flex-col items-center">
-      <h2 className="text-lg font-semibold mb-4">GitHub Commit Heatmap</h2>
-      <div className="grid grid-cols-52 gap-1">{gridCells}</div>
-
-      {/* Tooltip Display */}
-      {hoveredCommit && (
-        <div className="absolute bg-black text-white text-xs px-2 py-1 rounded-md shadow-md">
-          {hoveredCommit.date}: {hoveredCommit.count} commits
-        </div>
-      )}
+        ></div>
+      );
+      })}
     </div>
   );
-});
-
-// ✅ Set a display name for ESLint & React DevTools
-CommitHeatmap.displayName = "CommitHeatmap";
-
+}
