@@ -15,8 +15,20 @@ const githubColorMap: Record<string, string> = {
   "#216e39": "bg-green-800 dark:bg-green-900",
 };
 
+interface Commit {
+  date: string;
+  count: number;
+  color: string;
+}
+
 async function fetchCommits() {
-  const query = `
+  const response = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(`
     query {
       user(login: "alexandros-lekkas") {
         contributionsCollection {
@@ -32,15 +44,7 @@ async function fetchCommits() {
         }
       }
     }
-  `;
-
-  const response = await fetch("https://api.github.com/graphql", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query }),
+  `),
   });
 
   if (!response.ok) {
@@ -48,43 +52,33 @@ async function fetchCommits() {
   }
 
   const data = await response.json();
+
   return data.data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
     (week: any) =>
-      week.contributionDays.map((day: any) => ({
-        date: day.date,
-        count: day.contributionCount,
-        color: day.color,
-      }))
+      week.contributionDays.map(
+        (day: any) =>
+          ({
+            date: day.date,
+            count: day.contributionCount,
+            color: day.color,
+          } as Commit)
+      )
   );
 }
 
 export async function Commits() {
   const commits = await fetchCommits();
-  const commitMap = new Map(
-    commits.map((commit: any) => [commit.date, commit])
-  );
-
-  // Calculate the date range (52 weeks back)
-  const today = new Date();
-  const startDate = new Date();
-  startDate.setDate(today.getDate() - 52 * 7);
 
   return (
-    <div className="flex flex-row flex-wrap gap-1 p-4 border rounded-xl bg-white dark:bg-gray-900 dark:border-gray-700">
-      {Array.from({ length: 52 * 7 }, (_, i) => {
-        const currentDate = new Date(startDate);
-        currentDate.setDate(startDate.getDate() + i);
-        const dateString = currentDate.toISOString().split("T")[0];
-
-        const commit = commitMap.get(dateString);
+    <div className="flex flex-row flex-wrap">
+      {commits.map((commit: Commit) => {
         const backgroundClass =
-          commit && commit.color
-            ? githubColorMap[commit.color] ||
-              "bg-gray-200 dark:bg-gray-700" // fallback if color is not in map
-            : "bg-gray-200 dark:bg-gray-700"; // no-commit fallback
+          commit.color && githubColorMap[commit.color]
+            ? githubColorMap[commit.color]
+            : "bg-gray-200 dark:bg-gray-700";
 
         return (
-          <TooltipProvider key={dateString}>
+          <TooltipProvider key={commit.date}>
             <Tooltip>
               <TooltipTrigger>
                 <div
@@ -92,10 +86,10 @@ export async function Commits() {
                 />
               </TooltipTrigger>
               <TooltipContent>
-                {commit ? (
+                {commit.count > 0 ? (
                   <div>
                     <div>{commit.count} commits</div>
-                    <div>{dateString}</div>
+                    <div>{commit.date}</div>
                   </div>
                 ) : (
                   <div>No commits</div>
@@ -106,5 +100,5 @@ export async function Commits() {
         );
       })}
     </div>
-  );
+  )
 }
