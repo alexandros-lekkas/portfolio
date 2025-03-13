@@ -1,4 +1,3 @@
-
 import {
   Tooltip,
   TooltipContent,
@@ -8,14 +7,12 @@ import {
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
-// Map GitHub’s returned colors to Tailwind classes so you can adjust them per theme:
 const githubColorMap: Record<string, string> = {
-  "#ebedf0": "bg-gray-200 dark:bg-gray-700",   // Typically no/low commits
-  "#9be9a8": "bg-green-100 dark:bg-green-600",
-  "#40c463": "bg-green-300 dark:bg-green-700",
-  "#30a14e": "bg-green-600 dark:bg-green-800",
+  "#ebedf0": "bg-gray-200 dark:bg-gray-700",
+  "#9be9a8": "bg-green-100 dark:bg-green-200",
+  "#40c463": "bg-green-300 dark:bg-green-500",
+  "#30a14e": "bg-green-600 dark:bg-green-700",
   "#216e39": "bg-green-800 dark:bg-green-900",
-  // Add or adjust mappings if GitHub returns different hex codes
 };
 
 async function fetchCommits() {
@@ -91,7 +88,7 @@ export async function Commits() {
             <Tooltip>
               <TooltipTrigger>
                 <div
-                  className={`w-4 h-4 rounded-md cursor-pointer transition-all duration-150 ${backgroundClass}`}
+                  className={`w-4 h-4 rounded-md cursor-pointer transition-all ${backgroundClass}`}
                 />
               </TooltipTrigger>
               <TooltipContent>
