@@ -1,16 +1,13 @@
-import Navbar from "@/components/layout/navbar/navbar";
-import { ThemeProvider } from "@/providers/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import { Metadata } from "next";
+import { ThemeProvider } from "@/providers/theme-provider";
+import { TooltipProvider } from "@/components/ui/tooltip";
+
+import Navbar from "@/components/layout/navbar/navbar";
+import { DATA } from "@/data/resume";
+
+import { figtree } from "@/lib/constants/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -54,13 +51,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
-        )}
-      >
+    <html lang="en" className={figtree.className} suppressHydrationWarning>
+      <body className="bg-background text-foreground">
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
