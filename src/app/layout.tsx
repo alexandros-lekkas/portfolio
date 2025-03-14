@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import { Metadata } from "next";
-import { ThemeProvider } from "@/providers/theme-provider";
+import { ThemeProvider } from "@/lib/providers/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 import { figtree } from "@/lib/constants/fonts";

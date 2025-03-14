@@ -72,35 +72,37 @@ export async function Commits() {
   const commits = await fetchCommits();
 
   return (
-    <div className="flex flex-row flex-wrap gap-1 p-4 border rounded-xl">
-      {commits.map((commit: Commit) => {
-        const backgroundClass =
-          commit.color && githubColorMap[commit.color]
-            ? githubColorMap[commit.color]
-            : "bg-gray-200 dark:bg-gray-700";
+    <section id="commits">
+      <div className="flex flex-row flex-wrap gap-1 p-4 border rounded-xl">
+        {commits.map((commit: Commit) => {
+          const backgroundClass =
+            commit.color && githubColorMap[commit.color]
+              ? githubColorMap[commit.color]
+              : "bg-gray-200 dark:bg-gray-700";
 
-        return (
-          <TooltipProvider key={commit.date}>
-            <Tooltip>
-              <TooltipTrigger>
-                <div
-                  className={`w-4 h-4 rounded-md cursor-pointer transition-all ${backgroundClass}`}
-                />
-              </TooltipTrigger>
-              <TooltipContent>
-                {commit.count > 0 ? (
-                  <div>
-                    <div>{commit.count} commits</div>
-                    <div>{commit.date}</div>
-                  </div>
-                ) : (
-                  <div>No commits</div>
-                )}
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        );
-      })}
-    </div>
+          return (
+            <TooltipProvider key={commit.date}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div
+                    className={`w-4 h-4 rounded-md cursor-pointer transition-all ${backgroundClass}`}
+                  />
+                </TooltipTrigger>
+                <TooltipContent>
+                  {commit.count > 0 ? (
+                    <div>
+                      <div>{commit.count} commits</div>
+                      <div>{commit.date}</div>
+                    </div>
+                  ) : (
+                    <div>No commits</div>
+                  )}
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          );
+        })}
+      </div>
+    </section>
   );
 }
