@@ -8,20 +8,18 @@ import { figtree } from "@/lib/constants/fonts";
 
 import Navbar from "@/components/layout/navbar/navbar";
 
-import { DATA } from "@/data/resume";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
+  metadataBase: new URL("alexandroslekkas.com"),
   title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
+    default: "Alexandros Lekkas",
+    template: `%s | Alexandros Lekkas`,
   },
-  description: DATA.description,
+  description: "My personal website.",
   openGraph: {
-    title: `${DATA.name}`,
-    description: DATA.description,
-    url: DATA.url,
-    siteName: `${DATA.name}`,
+    title: "Alexandros Lekkas",
+    description: "My personal website.",
+    url: "https://alexandroslekkas.com",
+    siteName: "Alexandros Lekkas",
     locale: "en_US",
     type: "website",
   },
@@ -37,7 +35,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: "Alexandros Lekkas",
     card: "summary_large_image",
   },
   verification: {

@@ -1,17 +1,15 @@
 import { Suspense } from "react";
-
-import Markdown from "react-markdown";
 import Link from "next/link";
 
 import { ProjectCard } from "@/components/data/project-card";
-import { ResumeCard } from "@/components/data/resume-card";
 import { Badge } from "@/components/ui/badge";
 
 import { Hero } from "./hero";
-
-import { DATA } from "@/data/resume";
 import { Commits } from "./commits";
 import { Work } from "./work";
+import { Education } from "./education";
+
+import { DATA } from "@/data/resume";
 
 export default function Page() {
   return (
@@ -20,27 +18,11 @@ export default function Page() {
 
       <Work />
 
+      <Education />
+
       <Suspense>
         <Commits />
       </Suspense>
-
-      {/* Education */}
-      <section id="education">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <h2 className="text-xl font-bold">Education</h2>
-          {DATA.education.map((education, id) => (
-            <ResumeCard
-              key={education.school}
-              href={education.href}
-              logoUrl={education.logoUrl}
-              altText={education.school}
-              title={education.school}
-              subtitle={education.degree}
-              period={`${education.start} - ${education.end}`}
-            />
-          ))}
-        </div>
-      </section>
 
       {/* Skills */}
       <section id="skills">

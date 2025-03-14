@@ -1,5 +1,5 @@
 import { Icons } from "@/components/layout/navbar/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   skills: [
@@ -48,24 +48,7 @@ export const DATA = {
 
 
 
-  education: [
-    {
-      school: "University of Chicago",
-      href: "https://uchicago.edu",
-      degree: "Bachelor of Science - BS, Computer Science",
-      logoUrl: "/orgs/uchicago.jpeg",
-      start: "2024",
-      end: "2028",
-    },
-    {
-      school: "St. Catherine's British School, Athens, Greece",
-      href: "https://stcatherines.gr",
-      degree: "International Baccalaureate (IB)",
-      logoUrl: "/orgs/stcats.jpeg",
-      start: "2022",
-      end: "2024",
-    },
-  ],
+
 
   projects: [
     {
