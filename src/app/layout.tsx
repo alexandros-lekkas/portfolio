@@ -53,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={figtree.className} suppressHydrationWarning>
-      <body className="bg-background text-foreground max-w-2xl mx-auto py-8">
+      <body className="bg-background text-foreground max-w-2xl mx-auto py-12 px-5">
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}

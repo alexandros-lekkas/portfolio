@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import Markdown from "react-markdown";
 import Link from "next/link";
 
@@ -8,39 +10,19 @@ import { Badge } from "@/components/ui/badge";
 import { Hero } from "./hero";
 
 import { DATA } from "@/data/resume";
+import { Commits } from "./commits";
+import { Work } from "./work";
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-[100dvh] space-y-10">
       <Hero />
 
-      {/* About */}
-      <section id="about">
-        <h2 className="text-xl font-bold">About</h2>
-        <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-          {DATA.summary}
-        </Markdown>
-      </section>
+      <Work />
 
-      {/* Work */}
-      <section id="work">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <h2 className="text-xl font-bold">Work Experience</h2>
-          {DATA.work.map((work, id) => (
-            <ResumeCard
-              key={work.company}
-              logoUrl={work.logoUrl}
-              altText={work.company}
-              title={work.company}
-              subtitle={work.title}
-              href={work.href}
-              badges={work.badges}
-              period={`${work.start} - ${work.end ?? "Present"}`}
-              description={work.description}
-            />
-          ))}
-        </div>
-      </section>
+      <Suspense>
+        <Commits />
+      </Suspense>
 
       {/* Education */}
       <section id="education">

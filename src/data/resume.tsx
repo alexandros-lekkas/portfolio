@@ -2,15 +2,6 @@ import { Icons } from "@/components/layout/navbar/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Alexandros Lekkas",
-  initials: "AL",
-  url: "https://alexandroslekkas.com",
-  location: "Chicago IL / Athens, Greece",
-  description:
-    "CS Student @ UChicago - Aspiring Software Engineer & Entrepreneur",
-  summary:
-    "I'm a Computer Science student at the University of Chicago, passionate about combining software development with entrepreneurship.",
-  avatarUrl: "/me.jpeg",
   skills: [
     "React",
     "Next.js",
@@ -55,44 +46,7 @@ export const DATA = {
     },
   },
 
-  work: [
-    {
-      company: "Plum",
-      href: "https://withplum.com",
-      badges: [],
-      location: "On-site",
-      title: "Software Development Intern Trainee",
-      logoUrl: "/orgs/plum.jpeg",
-      start: "Sep 2024",
-      end: "Sep 2024",
-      description:
-        "Enhanced AI assistant performance by experimenting with embedding-based matching and LLM integrations (Langchain, OpenAI), identifying LLMs as optimal for rapid categorization.",
-    },
-    {
-      company: "HagoBuy",
-      href: "https://hagobuy.com",
-      badges: [],
-      location: "Remote",
-      title: "Affiliate Marketer (Level 5/5)",
-      logoUrl: "",
-      start: "Nov 2023",
-      end: "Jan 2024",
-      description:
-        " Generated over $150,000 in revenue for an ecommerce website in just 3 months, significantly expanding the platform’s presence in Greece as a top-performing affiliate.",
-    },
-    {
-      company: "efood",
-      href: "https://e-food.gr",
-      badges: [],
-      location: "On-site",
-      title: "Software Development Intern Trainee",
-      logoUrl: "/orgs/efood.jpeg",
-      start: "Jul 2023",
-      end: "Jul 2023",
-      description:
-        "Developed an AI recipe generator using Next.js and OpenAI's API, collaborating closely with the Frontend Team lead to refine web development skills and integrate project features effectively.",
-    },
-  ],
+
 
   education: [
     {

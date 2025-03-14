@@ -2,19 +2,19 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
-const BLUR_FADE_DELAY = 0.04;
+const BLUR_FADE_DELAY = 0;
 
 const data = {
-  name: "Alexandros",
-  description: "Aspiring Software Engineer & Entrepreneur",
-  avatar: "/me.jpeg",
+  name: "Alex",
+  description: "Computer Science Student at the University of Chicago, Aspiring Software Engineer & Entrepreneur",
+  avatar: "/images/me.jpg",
 };
 
 export function Hero() {
   return (
     <section id="hero">
       <div className="mx-auto w-full max-w-2xl space-y-8">
-        <div className="gap-2 flex justify-between">
+        <div className="gap-2 flex justify-between items-center">
           <div className="flex-col flex flex-1 space-y-1.5">
             <BlurFadeText
               delay={BLUR_FADE_DELAY}
@@ -29,7 +29,7 @@ export function Hero() {
             />
           </div>
           <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <Avatar className="size-28 border">
+            <Avatar className="size-36 border">
               <AvatarImage alt="Alexandros Lekkas" src={data.avatar} />
               <AvatarFallback>AL</AvatarFallback>
             </Avatar>
