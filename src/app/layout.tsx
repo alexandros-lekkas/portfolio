@@ -9,7 +9,7 @@ import { figtree } from "@/lib/constants/fonts";
 import Navbar from "@/components/layout/navbar/navbar";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("alexandroslekkas.com"),
+  metadataBase: new URL("https://alexandroslekkas.com"),
   title: {
     default: "Alexandros Lekkas",
     template: `%s | Alexandros Lekkas`,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alexandros Lekkas",
     description: "My personal website.",
-    url: "https://alexandroslekkas.com",
+    url: "alexandroslekkas.com",
     siteName: "Alexandros Lekkas",
     locale: "en_US",
     type: "website",

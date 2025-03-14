@@ -1,4 +1,7 @@
 import { ResumeCard } from "@/components/data/resume-card";
+import { BlurFade } from "@/components/magicui/blur-fade";
+
+const BLUR_FADE_DELAY = 0;
 
 const data = {
   education: [
@@ -24,20 +27,22 @@ const data = {
 export function Education() {
   return (
     <section id="education">
-      <div className="flex min-h-0 flex-col gap-y-3">
-        <h2 className="text-xl font-bold">Education</h2>
-        {data.education.map((education, id) => (
-          <ResumeCard
-            key={education.school}
-            href={education.href}
-            logoUrl={education.logoUrl}
-            altText={education.school}
-            title={education.school}
-            subtitle={education.degree}
-            period={`${education.start} - ${education.end}`}
-          />
-        ))}
-      </div>
+      <BlurFade delay={BLUR_FADE_DELAY}>
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <h2 className="text-xl font-bold">Education</h2>
+          {data.education.map((education, id) => (
+            <ResumeCard
+              key={education.school}
+              href={education.href}
+              logoUrl={education.logoUrl}
+              altText={education.school}
+              title={education.school}
+              subtitle={education.degree}
+              period={`${education.start} - ${education.end}`}
+            />
+          ))}
+        </div>
+      </BlurFade>
     </section>
   );
 }
