@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-import { Commits } from "../../components/data/commits";
+import { Commits } from "../commits";
 
 export default function StatsPage() {
   return (
