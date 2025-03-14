@@ -1,5 +1,6 @@
 import { ProjectCard } from "@/components/data/project-card";
 import { Icons } from "@/components/layout/navbar/icons";
+import { BlurFade } from "@/components/magicui/blur-fade";
 
 const data = {
   projects: [
@@ -74,42 +75,44 @@ const data = {
 export function Projects() {
   return (
     <section id="projects">
-      <div className="space-y-12 w-full py-12">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-              My Projects
+      <BlurFade>
+        <div className="space-y-12 w-full py-12">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                My Projects
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Check out my latest work
+              </h2>
+              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                I&apos;ve worked on a variety of projects, from simple Java
+                applications to full-stack web applications. Here are some of my
+                favorites.
+              </p>
+              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Some projects that are under wraps are not listed here, so this
+                part may look a little bare (for now). 😅🤫
+              </p>
             </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              Check out my latest work
-            </h2>
-            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              I&apos;ve worked on a variety of projects, from simple Java
-              applications to full-stack web applications. Here are some of my
-              favorites.
-            </p>
-            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Some projects that are under wraps are not listed here, so this
-              part may look a little bare (for now). 😅🤫
-            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {data.projects.map((project, id) => (
+              <ProjectCard
+                href={project.href}
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                dates={project.dates}
+                tags={project.technologies}
+                image={project.image}
+                video={project.video}
+                links={project.links}
+              />
+            ))}
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-          {data.projects.map((project, id) => (
-            <ProjectCard
-              href={project.href}
-              key={project.title}
-              title={project.title}
-              description={project.description}
-              dates={project.dates}
-              tags={project.technologies}
-              image={project.image}
-              video={project.video}
-              links={project.links}
-            />
-          ))}
-        </div>
-      </div>
+      </BlurFade>
     </section>
   );
 }
