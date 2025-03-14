@@ -4,10 +4,11 @@ import { Metadata } from "next";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-import Navbar from "@/components/layout/navbar/navbar";
-import { DATA } from "@/data/resume";
-
 import { figtree } from "@/lib/constants/fonts";
+
+import Navbar from "@/components/layout/navbar/navbar";
+
+import { DATA } from "@/data/resume";
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -52,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={figtree.className} suppressHydrationWarning>
-      <body className="bg-background text-foreground">
+      <body className="bg-background text-foreground max-w-2xl mx-auto py-8">
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}

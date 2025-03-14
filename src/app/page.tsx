@@ -3,8 +3,8 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/display/project-card";
-import { ResumeCard } from "@/components/display/resume-card";
+import { ProjectCard } from "@/components/data/project-card";
+import { ResumeCard } from "@/components/data/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 
