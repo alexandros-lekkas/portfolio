@@ -23,9 +23,8 @@ const data = {
   ],
 };
 
-export function Skills({ linkedInProfile }: { linkedInProfile: LinkedInProfile }) {
+export function Skills() {
   return (
-    linkedInProfile.
     <section id="skills">
       <BlurFade delay={BLUR_FADE_DELAY}>
         <div className="flex min-h-0 flex-col gap-y-3">
