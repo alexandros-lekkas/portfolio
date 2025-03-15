@@ -5,5 +5,5 @@ export function FormatDate(date: {
   month: number;
   day: number;
 }): string {
-  return `${months[date.month - 1]} ${date.year}`;
+  return `${months[date.month - 1].abbreviation} ${date.year}`;
 }
