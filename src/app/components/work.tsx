@@ -17,7 +17,7 @@ export function Work({
           <h2 className="text-xl font-bold">Work Experience</h2>
           {linkedInProfile.experiences.map((work, id) => (
             <ResumeCard
-              key={work.company}
+              key={`${id}-${work.company}`}
               logoUrl={work.logo_url}
               altText={work.company}
               title={work.company}

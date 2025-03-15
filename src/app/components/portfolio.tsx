@@ -16,17 +16,16 @@ const fetchLinkedInProfile = cache(
       const response = await fetch(
         "https://nubela.co/proxycurl/api/v2/linkedin?linkedin_profile_url=https://linkedin.com/in/alexandros-lekkas&use_cache=if-present",
         {
-          method: "POST",
+          method: "GET",
           headers: {
             Authorization: `Bearer ${PROXYCURL_API_KEY}`,
-            "Content-Type": "application/json",
           },
           next: { revalidate: 1209600 },
         }
       );
 
       if (!response.ok) {
-        throw new Error("Failed to fetch LinkedIn profile");
+        throw new Error(`Failed to fetch LinkedIn profile: ${response.statusText}`);
       }
 
       const data = await response.json();
@@ -42,13 +41,15 @@ const fetchLinkedInProfile = cache(
 export async function Portfolio() {
   const linkedInProfile = await fetchLinkedInProfile();
 
-  return linkedInProfile && (
-    <>
-      <Hero linkedInProfile={linkedInProfile} />
-      <Work linkedInProfile={linkedInProfile}/>
-      <Education linkedInProfile={linkedInProfile} />
-      <Skills />
-      <Projects />
-    </>
+  return (
+    linkedInProfile && (
+      <>
+        <Hero linkedInProfile={linkedInProfile} />
+        <Work linkedInProfile={linkedInProfile} />
+        <Education linkedInProfile={linkedInProfile} />
+        <Skills />
+        <Projects />
+      </>
+    )
   );
 }
