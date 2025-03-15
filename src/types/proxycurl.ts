@@ -1,11 +1,11 @@
 export interface LinkedInProfile {
   accomplishment_courses: any[];
   accomplishment_honors_awards: any[];
-  accomplishments_organisations: any[];
-  accomplishments_patents: any[];
-  accomplishments_projects: {
+  accomplishment_organisations: any[];
+  accomplishment_patents: any[];
+  accomplishment_projects: {
     description: string;
-    ends_at: string;
+    ends_at: string | null;
     starts_at: {
       day: number;
       month: number;
@@ -14,8 +14,8 @@ export interface LinkedInProfile {
     title: string;
     url: string;
   }[];
-  accomplishments_publications: any[];
-  accomplishments_test_scores: any[];
+  accomplishment_publications: any[];
+  accomplishment_test_scores: any[];
   activities: {
     activity_status: string;
     link: string;
@@ -23,12 +23,21 @@ export interface LinkedInProfile {
   }[];
   articles: any[];
   background_cover_image_url: string;
-  certifications: any[];
+  certifications: {
+    authority: string;
+    display_source?: string | null;
+    ends_at: string | null;
+    license_number?: string | null;
+    name: string;
+    starts_at: string | null;
+    url?: string | null;
+  }[];
   city: string;
-  connections: null;
+  connections: number | null;
   country: string;
   country_full_name: string;
   education: {
+    activities_and_societies?: string | null;
     degree_name: string | null;
     description: string | null;
     ends_at: {
@@ -37,7 +46,10 @@ export interface LinkedInProfile {
       year: number;
     } | null;
     field_of_study: string | null;
+    grade?: string | null;
     logo_url: string;
+    school: string;
+    school_facebook_profile_url?: string | null;
     school_linkedin_profile_url: string;
     starts_at: {
       day: number;
@@ -47,6 +59,7 @@ export interface LinkedInProfile {
   }[];
   experiences: {
     company: string;
+    company_facebook_profile_url?: string | null;
     company_linkedin_profile_url: string;
     description: string;
     ends_at: {
@@ -54,7 +67,7 @@ export interface LinkedInProfile {
       month: number;
       year: number;
     } | null;
-    location: string;
+    location?: string | null;
     logo_url: string;
     starts_at: {
       day: number;
@@ -64,6 +77,7 @@ export interface LinkedInProfile {
     title: string;
   }[];
   first_name: string;
+  follower_count?: number | null;
   full_name: string;
   groups: any[];
   headline: string;
@@ -73,8 +87,13 @@ export interface LinkedInProfile {
   people_also_viewed: any[];
   profile_pic_url: string;
   public_identifier: string;
-  recommendations: any[];
-  similarly_named_profiles: any[];
+  recommendations: string[];
+  similarly_named_profiles: {
+    link: string;
+    location: string;
+    name: string;
+    summary: string | null;
+  }[];
   state: string;
   summary: string;
   volunteer_work: any[];

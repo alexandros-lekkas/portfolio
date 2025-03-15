@@ -4,13 +4,11 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 
 import { LinkedInProfile } from "@/types/proxycurl";
 
-const data = {
-  name: "Alex",
-  description: "Computer Science Student at the University of Chicago, Aspiring Software Engineer & Entrepreneur",
-  avatar: "/images/me.jpg",
-};
-
-export function Hero({ linkedInProfile }: { linkedInProfile: LinkedInProfile }) {
+export function Hero({
+  linkedInProfile,
+}: {
+  linkedInProfile: LinkedInProfile;
+}) {
   return (
     <section id="hero">
       <div className="mx-auto w-full max-w-2xl space-y-8">
@@ -19,16 +17,19 @@ export function Hero({ linkedInProfile }: { linkedInProfile: LinkedInProfile }) 
             <BlurFadeText
               className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
               yOffset={8}
-              text={`Hi, I'm ${data.name} 👋`}
+              text={`Hi, I'm ${linkedInProfile.first_name} 👋`}
             />
             <BlurFadeText
               className="max-w-[600px] md:text-xl"
-              text={data.description}
+              text={linkedInProfile.headline}
             />
           </div>
           <BlurFade inView>
             <Avatar className="size-36 border">
-              <AvatarImage alt="Alexandros Lekkas" src={data.avatar} />
+              <AvatarImage
+                alt={linkedInProfile.full_name}
+                src={"/images/me.jpg"}
+              />
               <AvatarFallback>AL</AvatarFallback>
             </Avatar>
           </BlurFade>

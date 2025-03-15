@@ -1,5 +1,6 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Badge } from "@/components/ui/badge";
+import { LinkedInProfile } from "@/types/proxycurl";
 
 const BLUR_FADE_DELAY = 0;
 
@@ -22,8 +23,9 @@ const data = {
   ],
 };
 
-export function Skills() {
+export function Skills({ linkedInProfile }: { linkedInProfile: LinkedInProfile }) {
   return (
+    linkedInProfile.
     <section id="skills">
       <BlurFade delay={BLUR_FADE_DELAY}>
         <div className="flex min-h-0 flex-col gap-y-3">
