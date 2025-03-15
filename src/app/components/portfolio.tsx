@@ -45,8 +45,8 @@ export async function Portfolio() {
   return linkedInProfile && (
     <>
       <Hero linkedInProfile={linkedInProfile} />
-      <Work />
-      <Education />
+      <Work linkedInProfile={linkedInProfile}/>
+      <Education linkedInProfile={linkedInProfile} />
       <Skills />
       <Projects />
     </>

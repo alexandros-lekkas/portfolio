@@ -1,44 +1,31 @@
 import { ResumeCard } from "@/components/data/resume-card";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { FormatDate } from "@/lib/utils/common";
+import { LinkedInProfile } from "@/types/proxycurl";
 
-const BLUR_FADE_DELAY = 0;
-
-const data = {
-  education: [
-    {
-      school: "University of Chicago",
-      href: "https://uchicago.edu",
-      degree: "Bachelor of Science - BS, Computer Science",
-      logoUrl: "/orgs/uchicago.jpeg",
-      start: "2024",
-      end: "2028",
-    },
-    {
-      school: "St. Catherine's British School, Athens, Greece",
-      href: "https://stcatherines.gr",
-      degree: "International Baccalaureate (IB)",
-      logoUrl: "/orgs/stcats.jpeg",
-      start: "2022",
-      end: "2024",
-    },
-  ],
-};
-
-export function Education() {
+export function Education({
+  linkedInProfile,
+}: {
+  linkedInProfile: LinkedInProfile;
+}) {
   return (
     <section id="education">
-      <BlurFade delay={BLUR_FADE_DELAY}>
+      <BlurFade>
         <div className="flex min-h-0 flex-col gap-y-3">
           <h2 className="text-xl font-bold">Education</h2>
-          {data.education.map((education, id) => (
+          {linkedInProfile.education.map((education, id) => (
             <ResumeCard
               key={education.school}
-              href={education.href}
-              logoUrl={education.logoUrl}
+              href={education.school_linkedin_profile_url}
+              logoUrl={education.logo_url}
               altText={education.school}
               title={education.school}
-              subtitle={education.degree}
-              period={`${education.start} - ${education.end}`}
+              subtitle={education.degree_name ? education.degree_name : ""}
+              period={`${FormatDate(education.starts_at!)} - ${
+                education.ends_at
+                  ? `${FormatDate(education.ends_at)}`
+                  : "Present"
+              }`}
             />
           ))}
         </div>
