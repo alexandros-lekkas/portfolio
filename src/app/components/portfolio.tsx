@@ -42,9 +42,9 @@ const fetchLinkedInProfile = cache(
 export async function Portfolio() {
   const linkedInProfile = await fetchLinkedInProfile();
 
-  return (
+  return linkedInProfile && (
     <>
-      <Hero />
+      <Hero linkedInProfile={linkedInProfile} />
       <Work />
       <Education />
       <Skills />
