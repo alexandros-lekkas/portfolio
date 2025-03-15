@@ -5,6 +5,7 @@ const nextConfig = {
     domains: ['i.gyazo.com'],
   },
   env: {
+    PROXYCURL_API_KEY: process.env.PROXYCURL_API_KEY,
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
   },
 };
