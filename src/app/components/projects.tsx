@@ -85,15 +85,6 @@ export function Projects() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Check out my latest work
               </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I&apos;ve worked on a variety of projects, from simple Java
-                applications to full-stack web applications. Here are some of my
-                favorites.
-              </p>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Some projects that are under wraps are not listed here, so this
-                part may look a little bare (for now). 😅🤫
-              </p>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">

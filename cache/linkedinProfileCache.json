@@ -1,1 +1,217 @@
-{"timestamp":1742075643462,"profile":{"public_identifier":"alexandros-lekkas","profile_pic_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/person/alexandros-lekkas/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=8f1194151b5768d31cdc444191a4e31bc1c41e2e1adadbc13bd8474e575e281f","background_cover_image_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/person/alexandros-lekkas/cover?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=1ecf89bb6fc8fcad4b55b07713e5da9424f8b3e9c9fac127259a1e5658413210","first_name":"Alexandros","last_name":"Lekkas","full_name":"Alexandros Lekkas","follower_count":295,"occupation":"Software Development Internship Trainee at Plum ","headline":"Computer Science Student at the University of Chicago | Aspiring Software Engineer & Entrepreneur","summary":"I'm a Computer Science student at the University of Chicago, passionate about combining software development with entrepreneurship.","country":"US","country_full_name":"United States of America","city":"Chicago","state":"Illinois","experiences":[{"starts_at":{"day":1,"month":9,"year":2024},"ends_at":{"day":30,"month":9,"year":2024},"company":"Plum ","company_linkedin_profile_url":"https://www.linkedin.com/company/plum-fintech/","company_facebook_profile_url":null,"title":"Software Development Internship Trainee","description":"- Enhanced AI assistant performance by experimenting with embedding-based matching and LLM integrations (Langchain, OpenAI), identifying LLMs as optimal for rapid categorization.\n- Collaborated on the development of an AI assistant for shipping calculation and risk analysis using Python, FastAPI, and Langchain, under the mentorship of a senior Backend Engineer.\n- Streamlined team workflow by developing internal software in Budibase, transitioning the team from manual spreadsheet management to a more efficient system.","location":"Athens, Attiki, Greece","logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/plum-fintech/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=f59b0dc06f131d11051db60b2877f1a9ee1a170eb74bc22fd18be54b061cfe2f"},{"starts_at":{"day":1,"month":1,"year":2024},"ends_at":{"day":31,"month":1,"year":2024},"company":"HagoBuy","company_linkedin_profile_url":null,"company_facebook_profile_url":null,"title":"Affiliate Marketer (Level 5/5)","description":"- Generated over $150,000 in revenue for an ecommerce website in just 3 months, significantly expanding the platform’s presence in Greece as a top-performing affiliate.\n- Acquired over 5.5k users through data-driven marketing and content creation strategies, leveraging insights to drive successful campaigns.\n- Rapidly progressed to the top affiliate level within 2 months after being personally invited to the program, demonstrating strong performance and rapid growth.","location":"Guangzhou, Guangdong, China","logo_url":null},{"starts_at":{"day":1,"month":12,"year":2023},"ends_at":{"day":31,"month":12,"year":2023},"company":"HagoBuy","company_linkedin_profile_url":null,"company_facebook_profile_url":null,"title":"Affiliate Marketer (Level 4/5)","description":null,"location":"Guangzhou, Guangdong, China","logo_url":null},{"starts_at":{"day":1,"month":11,"year":2023},"ends_at":{"day":30,"month":11,"year":2023},"company":"HagoBuy","company_linkedin_profile_url":null,"company_facebook_profile_url":null,"title":"Affiliate Marketer (Level 3/5)","description":null,"location":"Guangzhou, Guangdong, China","logo_url":null},{"starts_at":{"day":1,"month":7,"year":2023},"ends_at":{"day":31,"month":7,"year":2023},"company":"efood","company_linkedin_profile_url":"https://www.linkedin.com/company/e-food-gr/","company_facebook_profile_url":null,"title":"Software Development Internship Trainee","description":"- Developed an AI recipe generator using Next.js and OpenAI's API, collaborating closely with the Frontend Team lead to refine web development skills and integrate project features effectively.\n- Awarded the internship after winning the 2022 StCatsHacks Hackathon, where I built the original AI recipe generator that utilized users’ leftovers.","location":"Irakleio, Attiki, Greece","logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/e-food-gr/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=6948b619d127739e8c7de135b36629d52c90b2732cdfbc85405ab52a92ac998e"}],"education":[{"starts_at":{"day":1,"month":9,"year":2024},"ends_at":{"day":31,"month":5,"year":2028},"field_of_study":"Computer Science","degree_name":"Bachelor of Science - BS","school":"University of Chicago","school_linkedin_profile_url":"https://www.linkedin.com/school/uchicago/","school_facebook_profile_url":null,"description":null,"logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/uchicago/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=985697f18d080a60a69da2dc93db575dd87607ff28774eb97cbf1c1c82ee3afa","grade":null,"activities_and_societies":null},{"starts_at":{"day":1,"month":9,"year":2022},"ends_at":{"day":30,"month":6,"year":2024},"field_of_study":null,"degree_name":"International Baccalaureate (IB)","school":"St Catherine's British School, Athens, Greece","school_linkedin_profile_url":"https://www.linkedin.com/school/st-catherine%27s-british-school-athens-greece/","school_facebook_profile_url":null,"description":null,"logo_url":"https://media.licdn.com/dms/image/v2/D4D0BAQEEVILuiCInWg/company-logo_400_400/company-logo_400_400/0/1706088811751/st_catherines_british_school_athens_greece_logo?e=1739404800&v=beta&t=nCV9Za3BZu6K5lwcUJQL-8cUo3xRtpWQ2lEZxkT9zBc","grade":"41/45 (GPA: ≈3.9/4.0)","activities_and_societies":null}],"languages":["English","Greek","Spanish"],"languages_and_proficiencies":[{"name":"English","proficiency":"NATIVE_OR_BILINGUAL"},{"name":"Greek","proficiency":"NATIVE_OR_BILINGUAL"},{"name":"Spanish","proficiency":"LIMITED_WORKING"}],"accomplishment_organisations":[],"accomplishment_publications":[],"accomplishment_honors_awards":[{"title":"Hackathon Winner of StCatsHacks","issuer":"StCatsHacks","issued_on":{"day":1,"month":12,"year":2022},"description":"- Created an LLM and image generation-based AI recipe generator.\n- Was awarded a position in efood's summer software development internship program as a result of this win."},{"title":"Outstanding Pearson Learner Award in Economics","issuer":"Pearson Edexcel","issued_on":{"day":1,"month":9,"year":2022},"description":"- Awarded the Outstanding Pearson Learner Award (2022) for achieving the highest mark in Greece for Pearson Edexcel IGCSE Economics.\n- Recognized for academic excellence and exceptional performance in the subject."}],"accomplishment_patents":[],"accomplishment_courses":[],"accomplishment_projects":[{"starts_at":{"day":1,"month":4,"year":2023},"ends_at":{"day":31,"month":5,"year":2024},"title":"IntelPol Student Newspaper","description":"- A student-run newspaper focusing on politics, economics, and business, providing insightful articles and analysis.\n- Invited by Athanasios Mitropoulos and Vassilis Hadjiemmanuil to join the IntelPol project as Technical Officer/Lead Developer.\n- Developed the bulk of the site's features & managed key technical aspects using the Wix Website Builder.","url":null}],"accomplishment_test_scores":[],"volunteer_work":[],"certifications":[],"connections":291,"people_also_viewed":[{"link":"https://www.linkedin.com/in/thomas-kalliaras-3aa336281","name":"Thomas Kalliaras","summary":"Student at Sacramento State University","location":null},{"link":"https://www.linkedin.com/in/chap","name":"Chloe Aracheski Perez","summary":"University of Chicago 2025","location":null},{"link":"https://www.linkedin.com/in/filippos-babalitis-24a032329","name":"Filippos Babalitis","summary":"Computer Science Student at University of Bristol","location":null},{"link":"https://www.linkedin.com/in/walter-kilgore-43241b2b0","name":"Walter Kilgore","summary":"Student Athlete at University of Chicago","location":null},{"link":"https://www.linkedin.com/in/vasileios-perrotis-b02406328","name":"Vasileios Perrotis","summary":"Undergraduate student at The University of Chicago","location":null},{"link":"https://www.linkedin.com/in/alesyakochenko","name":"Alesya Kochenko","summary":"Aspiring Astronaut | Future Computer Science Student","location":null},{"link":"https://www.linkedin.com/in/ivanmikhaylovbsc","name":"Ivan Mikhaylov","summary":"Student at The University of Chicago | Economics","location":null},{"link":"https://www.linkedin.com/in/sarah-guo-19805a333","name":"Sarah Guo","summary":"Student at University of Chicago","location":null},{"link":"https://www.linkedin.com/in/lingchen-wang-850a02305","name":"Lingchen Wang","summary":"University of Chicago","location":null},{"link":"https://www.linkedin.com/in/markosbontozoglou","name":"Markos Bontozoglou","summary":"Student at the University of Exeter, BSc Computer Science and Mathematics","location":null}],"recommendations":[],"activities":[],"similarly_named_profiles":[],"articles":[],"groups":[],"skills":[],"inferred_salary":null,"gender":null,"birth_date":null,"industry":null,"extra":null,"interests":[],"personal_emails":[],"personal_numbers":[]}}
+{
+  "timestamp": 1742075643462,
+  "profile": {
+    "public_identifier": "alexandros-lekkas",
+    "profile_pic_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/person/alexandros-lekkas/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=8f1194151b5768d31cdc444191a4e31bc1c41e2e1adadbc13bd8474e575e281f",
+    "background_cover_image_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/person/alexandros-lekkas/cover?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=1ecf89bb6fc8fcad4b55b07713e5da9424f8b3e9c9fac127259a1e5658413210",
+    "first_name": "Alexandros",
+    "last_name": "Lekkas",
+    "full_name": "Alexandros Lekkas",
+    "follower_count": 295,
+    "occupation": "Software Development Internship Trainee at Plum ",
+    "headline": "Computer Science Student at the University of Chicago | Aspiring Software Engineer & Entrepreneur",
+    "summary": "I'm a Computer Science student at the University of Chicago, passionate about combining software development with entrepreneurship.",
+    "country": "US",
+    "country_full_name": "United States of America",
+    "city": "Chicago",
+    "state": "Illinois",
+    "experiences": [
+      {
+        "starts_at": { "day": 1, "month": 9, "year": 2024 },
+        "ends_at": { "day": 30, "month": 9, "year": 2024 },
+        "company": "Plum ",
+        "company_linkedin_profile_url": "https://www.linkedin.com/company/plum-fintech/",
+        "company_facebook_profile_url": null,
+        "title": "Software Development Internship Trainee",
+        "description": "- Enhanced AI assistant performance by experimenting with embedding-based matching and LLM integrations (Langchain, OpenAI), identifying LLMs as optimal for rapid categorization.\n- Collaborated on the development of an AI assistant for shipping calculation and risk analysis using Python, FastAPI, and Langchain, under the mentorship of a senior Backend Engineer.\n- Streamlined team workflow by developing internal software in Budibase, transitioning the team from manual spreadsheet management to a more efficient system.",
+        "location": "Athens, Attiki, Greece",
+        "logo_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/company/plum-fintech/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=f59b0dc06f131d11051db60b2877f1a9ee1a170eb74bc22fd18be54b061cfe2f"
+      },
+      {
+        "starts_at": { "day": 1, "month": 1, "year": 2024 },
+        "ends_at": { "day": 31, "month": 1, "year": 2024 },
+        "company": "HagoBuy",
+        "company_linkedin_profile_url": null,
+        "company_facebook_profile_url": null,
+        "title": "Affiliate Marketer (Level 5/5)",
+        "description": "- Generated over $150,000 in revenue for an ecommerce website in just 3 months, significantly expanding the platform’s presence in Greece as a top-performing affiliate.\n- Acquired over 5.5k users through data-driven marketing and content creation strategies, leveraging insights to drive successful campaigns.\n- Rapidly progressed to the top affiliate level within 2 months after being personally invited to the program, demonstrating strong performance and rapid growth.",
+        "location": "Guangzhou, Guangdong, China",
+        "logo_url": null
+      },
+      {
+        "starts_at": { "day": 1, "month": 12, "year": 2023 },
+        "ends_at": { "day": 31, "month": 12, "year": 2023 },
+        "company": "HagoBuy",
+        "company_linkedin_profile_url": null,
+        "company_facebook_profile_url": null,
+        "title": "Affiliate Marketer (Level 4/5)",
+        "description": null,
+        "location": "Guangzhou, Guangdong, China",
+        "logo_url": null
+      },
+      {
+        "starts_at": { "day": 1, "month": 11, "year": 2023 },
+        "ends_at": { "day": 30, "month": 11, "year": 2023 },
+        "company": "HagoBuy",
+        "company_linkedin_profile_url": null,
+        "company_facebook_profile_url": null,
+        "title": "Affiliate Marketer (Level 3/5)",
+        "description": null,
+        "location": "Guangzhou, Guangdong, China",
+        "logo_url": null
+      },
+      {
+        "starts_at": { "day": 1, "month": 7, "year": 2023 },
+        "ends_at": { "day": 31, "month": 7, "year": 2023 },
+        "company": "efood",
+        "company_linkedin_profile_url": "https://www.linkedin.com/company/e-food-gr/",
+        "company_facebook_profile_url": null,
+        "title": "Software Development Internship Trainee",
+        "description": "- Developed an AI recipe generator using Next.js and OpenAI's API, collaborating closely with the Frontend Team lead to refine web development skills and integrate project features effectively.\n- Awarded the internship after winning the 2022 StCatsHacks Hackathon, where I built the original AI recipe generator that utilized users’ leftovers.",
+        "location": "Irakleio, Attiki, Greece",
+        "logo_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/company/e-food-gr/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=6948b619d127739e8c7de135b36629d52c90b2732cdfbc85405ab52a92ac998e"
+      }
+    ],
+    "education": [
+      {
+        "starts_at": { "day": 1, "month": 9, "year": 2024 },
+        "ends_at": { "day": 31, "month": 5, "year": 2028 },
+        "field_of_study": "Computer Science",
+        "degree_name": "Bachelor of Science - BS",
+        "school": "University of Chicago",
+        "school_linkedin_profile_url": "https://www.linkedin.com/school/uchicago/",
+        "school_facebook_profile_url": null,
+        "description": null,
+        "logo_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/company/uchicago/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250315%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250315T215402Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=985697f18d080a60a69da2dc93db575dd87607ff28774eb97cbf1c1c82ee3afa",
+        "grade": null,
+        "activities_and_societies": null
+      },
+      {
+        "starts_at": { "day": 1, "month": 9, "year": 2022 },
+        "ends_at": { "day": 30, "month": 6, "year": 2024 },
+        "field_of_study": null,
+        "degree_name": "International Baccalaureate (IB)",
+        "school": "St Catherine's British School, Athens, Greece",
+        "school_linkedin_profile_url": "https://www.linkedin.com/school/st-catherine%27s-british-school-athens-greece/",
+        "school_facebook_profile_url": null,
+        "description": null,
+        "logo_url": "https://media.licdn.com/dms/image/v2/D4D0BAQEEVILuiCInWg/company-logo_400_400/company-logo_400_400/0/1706088811751/st_catherines_british_school_athens_greece_logo?e=1739404800&v=beta&t=nCV9Za3BZu6K5lwcUJQL-8cUo3xRtpWQ2lEZxkT9zBc",
+        "grade": "41/45 (GPA: ≈3.9/4.0)",
+        "activities_and_societies": null
+      }
+    ],
+    "languages": ["English", "Greek", "Spanish"],
+    "languages_and_proficiencies": [
+      { "name": "English", "proficiency": "NATIVE_OR_BILINGUAL" },
+      { "name": "Greek", "proficiency": "NATIVE_OR_BILINGUAL" },
+      { "name": "Spanish", "proficiency": "LIMITED_WORKING" }
+    ],
+    "accomplishment_organisations": [],
+    "accomplishment_publications": [],
+    "accomplishment_honors_awards": [
+      {
+        "title": "Hackathon Winner of StCatsHacks",
+        "issuer": "StCatsHacks",
+        "issued_on": { "day": 1, "month": 12, "year": 2022 },
+        "description": "- Created an LLM and image generation-based AI recipe generator.\n- Was awarded a position in efood's summer software development internship program as a result of this win."
+      },
+      {
+        "title": "Outstanding Pearson Learner Award in Economics",
+        "issuer": "Pearson Edexcel",
+        "issued_on": { "day": 1, "month": 9, "year": 2022 },
+        "description": "- Awarded the Outstanding Pearson Learner Award (2022) for achieving the highest mark in Greece for Pearson Edexcel IGCSE Economics.\n- Recognized for academic excellence and exceptional performance in the subject."
+      }
+    ],
+    "accomplishment_patents": [],
+    "accomplishment_courses": [],
+    "accomplishment_projects": [
+      {
+        "starts_at": { "day": 1, "month": 4, "year": 2023 },
+        "ends_at": { "day": 31, "month": 5, "year": 2024 },
+        "title": "IntelPol Student Newspaper",
+        "description": "- A student-run newspaper focusing on politics, economics, and business, providing insightful articles and analysis.\n- Invited by Athanasios Mitropoulos and Vassilis Hadjiemmanuil to join the IntelPol project as Technical Officer/Lead Developer.\n- Developed the bulk of the site's features & managed key technical aspects using the Wix Website Builder.",
+        "url": null
+      }
+    ],
+    "accomplishment_test_scores": [],
+    "volunteer_work": [],
+    "certifications": [],
+    "connections": 291,
+    "people_also_viewed": [
+      {
+        "link": "https://www.linkedin.com/in/thomas-kalliaras-3aa336281",
+        "name": "Thomas Kalliaras",
+        "summary": "Student at Sacramento State University",
+        "location": null
+      },
+      {
+        "link": "https://www.linkedin.com/in/chap",
+        "name": "Chloe Aracheski Perez",
+        "summary": "University of Chicago 2025",
+        "location": null
+      },
+      {
+        "link": "https://www.linkedin.com/in/filippos-babalitis-24a032329",
+        "name": "Filippos Babalitis",
+        "summary": "Computer Science Student at University of Bristol",
+        "location": null
+      },
+      {
+        "link": "https://www.linkedin.com/in/walter-kilgore-43241b2b0",
+        "name": "Walter Kilgore",
+        "summary": "Student Athlete at University of Chicago",
+        "location": null
+      },
+      {
+        "link": "https://www.linkedin.com/in/vasileios-perrotis-b02406328",
+        "name": "Vasileios Perrotis",
+        "summary": "Undergraduate student at The University of Chicago",
+        "location": null
+      },
+      {
+        "link": "https://www.linkedin.com/in/alesyakochenko",
+        "name": "Alesya Kochenko",
+        "summary": "Aspiring Astronaut | Future Computer Science Student",
+        "location": null
+      },
+      {
+        "link": "https://www.linkedin.com/in/ivanmikhaylovbsc",
+        "name": "Ivan Mikhaylov",
+        "summary": "Student at The University of Chicago | Economics",
+        "location": null
+      },
+      {
+        "link": "https://www.linkedin.com/in/sarah-guo-19805a333",
+        "name": "Sarah Guo",
+        "summary": "Student at University of Chicago",
+        "location": null
+      },
+      {
+        "link": "https://www.linkedin.com/in/lingchen-wang-850a02305",
+        "name": "Lingchen Wang",
+        "summary": "University of Chicago",
+        "location": null
+      },
+      {
+        "link": "https://www.linkedin.com/in/markosbontozoglou",
+        "name": "Markos Bontozoglou",
+        "summary": "Student at the University of Exeter, BSc Computer Science and Mathematics",
+        "location": null
+      }
+    ],
+    "recommendations": [],
+    "activities": [],
+    "similarly_named_profiles": [],
+    "articles": [],
+    "groups": [],
+    "skills": [],
+    "inferred_salary": null,
+    "gender": null,
+    "birth_date": null,
+    "industry": null,
+    "extra": null,
+    "interests": [],
+    "personal_emails": [],
+    "personal_numbers": []
+  }
+}
