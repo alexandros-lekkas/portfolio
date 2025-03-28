@@ -75,45 +75,52 @@ export async function Commits() {
   return (
     <section id="commits">
       <BlurFade>
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full">
-          <div className="space-y-3">
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-              Activity
-            </div>
 
-            <div className="flex flex-row flex-wrap gap-1 p-4 border rounded-xl">
-              {commits.map((commit: Commit) => {
-                const backgroundClass =
-                  commit.color && githubColorMap[commit.color]
-                    ? githubColorMap[commit.color]
-                    : "bg-gray-200 dark:bg-gray-700";
+      <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full">
+        <div className="space-y-3">
 
-                return (
-                  <TooltipProvider key={commit.date}>
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <div
-                          className={`w-4 h-4 rounded-md cursor-pointer transition-all ${backgroundClass}`}
-                        />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        {commit.count > 0 ? (
-                          <div>
-                            <div>{commit.count} commits</div>
-                            <div>{commit.date}</div>
-                          </div>
-                        ) : (
-                          <div>No commits</div>
-                        )}
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                );
-              })}
-            </div>
-          </div>
+        <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+          Activity
         </div>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+          My Commits
+        </h2>
+
+        <div className="flex flex-row flex-wrap gap-1 p-4 border rounded-xl">
+          {commits.map((commit: Commit) => {
+            const backgroundClass =
+              commit.color && githubColorMap[commit.color]
+                ? githubColorMap[commit.color]
+                : "bg-gray-200 dark:bg-gray-700";
+
+            return (
+              <TooltipProvider key={commit.date}>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <div
+                      className={`w-4 h-4 rounded-md cursor-pointer transition-all ${backgroundClass}`}
+                    />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    {commit.count > 0 ? (
+                      <div>
+                        <div>{commit.count} commits</div>
+                        <div>{commit.date}</div>
+                      </div>
+                    ) : (
+                      <div>No commits</div>
+                    )}
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            );
+          })}
+        </div>
+        </div>
+
+      </div>
       </BlurFade>
+
     </section>
   );
 }

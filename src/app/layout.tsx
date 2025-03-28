@@ -1,12 +1,17 @@
-import "./globals.css";
-
 import { Metadata } from "next";
-import { ThemeProvider } from "@/lib/providers/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Figtree } from "next/font/google";
 
-import { figtree } from "@/lib/constants/fonts";
+import { ThemeProvider } from "@/lib/providers/theme-provider";
 
 import Navbar from "@/components/layout/navbar/navbar";
+import { TooltipProvider } from "@/components/ui/tooltip";
+
+import "./globals.css";
+
+const figtree = Figtree({
+  subsets: ["latin"],
+  variable: "--font-figtree",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://alexandroslekkas.com"),
@@ -51,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={figtree.className} suppressHydrationWarning>
-      <body className="bg-background text-foreground max-w-3xl mx-auto py-9 px-9">
+      <body className="bg-background text-foreground max-w-3xl mx-auto py-12 px-5">
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}

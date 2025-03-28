@@ -17,7 +17,7 @@ export function Hero({
             <BlurFadeText
               className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
               yOffset={8}
-              text={`Hi, I'm Alex 👋`}
+              text={`Hi, I'm ${linkedInProfile.first_name} 👋`}
             />
             <BlurFadeText
               className="max-w-[600px] md:text-xl"
