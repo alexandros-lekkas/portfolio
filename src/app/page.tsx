@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 
-import { Contact } from "./components/contact";
-import { Commits } from "./components/commits";
-import { Portfolio } from "./components/portfolio";
+import { Contact } from "./contact";
+import { Commits } from "./commits";
+import { Portfolio } from "./portfolio";
 
 export default function Page() {
   return (
