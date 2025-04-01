@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Contact } from "./contact";
 import { Commits } from "./commits";
 import { Portfolio } from "./portfolio";
+import Navbar from "@/components/layout/navbar/navbar";
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       </Suspense>
 
       <Contact />
+      <Navbar />
     </div>
   );
 }

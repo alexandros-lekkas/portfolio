@@ -2,8 +2,6 @@ import { Metadata } from "next";
 import { Figtree } from "next/font/google";
 
 import { ThemeProvider } from "@/lib/providers/theme-provider";
-
-import Navbar from "@/components/layout/navbar/navbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 import "./globals.css";
@@ -57,10 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={figtree.className} suppressHydrationWarning>
       <body className="bg-background text-foreground max-w-3xl mx-auto py-12 px-5">
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <TooltipProvider delayDuration={0}>
             {children}
-            <Navbar />
           </TooltipProvider>
         </ThemeProvider>
       </body>
