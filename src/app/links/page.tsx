@@ -1,6 +1,13 @@
 import Image from "next/image";
-import { Github, Linkedin, Youtube, Instagram } from "lucide-react";
-import { LucideIcon } from "lucide-react";
+
+import {
+  Github,
+  Linkedin,
+  Youtube,
+  Instagram,
+  MessageSquare,
+  LucideIcon,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -38,6 +45,12 @@ const data: {
     url: "https://instagram.com/aflekkas",
     icon: Instagram,
     color: "hover:bg-pink-600",
+  },
+  {
+    name: "Discord",
+    url: "https://discord.gg/ERZbqzSs2A",
+    icon: MessageSquare,
+    color: "hover:bg-blue-600",
   },
 ];
 
