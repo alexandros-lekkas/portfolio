@@ -45,7 +45,7 @@ export function About() {
           alt="me"
           width={175}
           height={175}
-          className="rounded-full size-86 aspect-square ring-4 ring-neutral-100 dark:ring-neutral-800"
+          className="rounded-full size-48 md:size-56 lg:size-64 aspect-square ring-4 ring-neutral-100 dark:ring-neutral-800"
         />
       </div>
     </>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Pointer } from "./pointer";
+import { Pointer } from "./magicui/pointer";
 
 export function ClientPointer() {
   const [isMobile, setIsMobile] = useState(false);
