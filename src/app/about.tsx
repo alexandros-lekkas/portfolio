@@ -32,7 +32,7 @@ export function About() {
               <a
                 href={link.url}
                 key={link.name}
-                className="cursor-none bg-foreground p-2 text-background rounded-lg"
+                className="sm:cursor-none bg-foreground dark:bg-neutral-800 p-2 text-background dark:text-neutral-300 rounded-lg"
               >
                 {link.icon}
               </a>
@@ -45,7 +45,7 @@ export function About() {
           alt="me"
           width={175}
           height={175}
-          className="rounded-full size-86 aspect-square"
+          className="rounded-full size-86 aspect-square ring-4 ring-neutral-100 dark:ring-neutral-800"
         />
       </div>
     </>

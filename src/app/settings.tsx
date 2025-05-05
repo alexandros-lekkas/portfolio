@@ -23,7 +23,7 @@ export function Settings() {
               checked={resolvedTheme === "dark"}
               onCheckedChange={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
               aria-label="Toggle theme"
-              className="cursor-none"
+              className="sm:cursor-none"
             />
             <Moon className="h-4 w-4 text-muted-foreground" />
           </div>

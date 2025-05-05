@@ -1,3 +1,7 @@
+const projects = [
+  
+]
+
 export function Projects() {
   return (
     <>

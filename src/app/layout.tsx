@@ -3,7 +3,7 @@ import { Figtree } from "next/font/google";
 
 import { ThemeProvider } from "@/lib/providers/theme-provider";
 
-import { ClientPointer } from "@/components/magicui/client-pointer";
+import { ClientPointer } from "@/components/client-pointer";
 
 import "./globals.css";
 
