@@ -19,7 +19,7 @@ export function Settings() {
 
           <div className="flex items-center gap-2">
             <Sun className="h-4 w-4 text-muted-foreground" />
-            <Switch 
+            <Switch
               checked={resolvedTheme === "dark"}
               onCheckedChange={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
               aria-label="Toggle theme"
