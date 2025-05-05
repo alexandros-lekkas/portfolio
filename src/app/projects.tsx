@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
-// Expected image size: 1280x720 (ratio: 16:9)
+import { SquareArrowOutUpRightIcon } from "lucide-react";
+
 const projects = [
   {
     coverImage: "/images/projects/1.gif",
-    name: "Brain Builder 🧠",
+    name: "🧠 Brain Builder",
     description:
       "A web app that helps you build AI agents brains. Built in collaboration with SimcareAI, a YC backed startup.",
     link: "https://github.com/username/project1",
@@ -28,7 +30,7 @@ export function Projects() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className="flex flex-col gap-2 bg-muted transition-all duration-300 hover:ring-4 ring-neutral-200 dark:ring-neutral-700 rounded-xl p-3"
+            className="relative flex flex-col gap-2 bg-muted transition-all duration-300 hover:ring-4 ring-neutral-200 dark:ring-neutral-700 rounded-xl p-3"
           >
             <Image
               src={project.coverImage}
@@ -37,8 +39,16 @@ export function Projects() {
               height={720}
               className="aspect-video rounded-lg"
             />
+
             <div className="flex flex-col gap-2">
-              <h3 className="text-lg font-semibold">{project.name}</h3>
+              <div className="flex flex-row gap-2 items-center">
+                <h3 className="text-lg font-semibold">{project.name}</h3>
+
+                <Link href={project.link} target="_blank">
+                  <SquareArrowOutUpRightIcon className="size-4" />
+                </Link>
+              </div>
+
               <p className="text-sm text-muted-foreground">
                 {project.description}
               </p>
