@@ -3,6 +3,8 @@ import { Figtree } from "next/font/google";
 
 import { ThemeProvider } from "@/lib/providers/theme-provider";
 
+import { Pointer } from "@/components/magicui/pointer";
+
 import "./globals.css";
 
 const figtree = Figtree({
@@ -55,9 +57,11 @@ export default function RootLayout({
     <html lang="en" className={figtree.className} suppressHydrationWarning>
       <body>
         <main className="bg-background">
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="system" forcedTheme="light" enableSystem>
             {children}
           </ThemeProvider>
+          
+          <Pointer />
         </main>
       </body>
     </html>
