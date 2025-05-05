@@ -28,7 +28,7 @@ export function Projects() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className="flex flex-col gap-2 bg-muted transition-all duration-300 hover:ring-4 ring-neutral-100 dark:ring-neutral-700 rounded-xl p-3"
+            className="flex flex-col gap-2 bg-muted transition-all duration-300 hover:ring-4 ring-neutral-200 dark:ring-neutral-700 rounded-xl p-3"
           >
             <Image
               src={project.coverImage}
