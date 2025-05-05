@@ -3,7 +3,7 @@ import { Figtree } from "next/font/google";
 
 import { ThemeProvider } from "@/lib/providers/theme-provider";
 
-import { Pointer } from "@/components/magicui/pointer";
+import { ClientPointer } from "@/components/magicui/client-pointer";
 
 import "./globals.css";
 
@@ -61,7 +61,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
           
-          <Pointer />
+          <ClientPointer />
         </main>
       </body>
     </html>

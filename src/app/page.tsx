@@ -49,9 +49,7 @@ export default function Page() {
           </div>
 
           <ScrollArea className="bg-background h-full">
-            <div className="p-5 flex flex-col gap-3">
-              {activeTab.component}
-            </div>
+            <div className="p-5 flex flex-col gap-3">{activeTab.component}</div>
           </ScrollArea>
         </div>
       </div>
