@@ -1,21 +1,9 @@
-import { Suspense } from "react";
-
-import { Contact } from "./contact";
-import { Commits } from "./commits";
-import { Portfolio } from "./portfolio";
-import Navbar from "@/components/layout/navbar/navbar";
+import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pattern";
 
 export default function Page() {
   return (
-    <div className="flex flex-col min-h-[100dvh] space-y-10">
-      <Portfolio />
-
-      <Suspense>
-        <Commits />
-      </Suspense>
-
-      <Contact />
-      <Navbar />
+    <div className="h-full w-full overflow-hidden">
+      <InteractiveGridPattern />
     </div>
   );
 }

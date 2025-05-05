@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { Figtree } from "next/font/google";
 
 import { ThemeProvider } from "@/lib/providers/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
 
 import "./globals.css";
 
@@ -54,12 +53,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={figtree.className} suppressHydrationWarning>
-      <body className="bg-background text-foreground max-w-3xl mx-auto py-12 px-5">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <TooltipProvider delayDuration={0}>
+      <body>
+        <main className="bg-background">
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
-          </TooltipProvider>
-        </ThemeProvider>
+          </ThemeProvider>
+        </main>
       </body>
     </html>
   );
