@@ -29,7 +29,11 @@ export function About() {
 
           <div className="flex flex-wrap gap-2">
             {links.map((link) => (
-              <a href={link.url} key={link.name} className="cursor-none bg-foreground p-2 text-white rounded-lg">
+              <a
+                href={link.url}
+                key={link.name}
+                className="cursor-none bg-foreground p-2 text-background rounded-lg"
+              >
                 {link.icon}
               </a>
             ))}

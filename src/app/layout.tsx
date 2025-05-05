@@ -57,7 +57,7 @@ export default function RootLayout({
     <html lang="en" className={figtree.className} suppressHydrationWarning>
       <body>
         <main className="bg-background">
-          <ThemeProvider attribute="class" defaultTheme="system" forcedTheme="light" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
           </ThemeProvider>
           
