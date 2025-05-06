@@ -80,11 +80,41 @@ const links = [
   }
 ];
 
+function ProfileSection() {
+  return (
+    <div className="flex flex-row sm:flex-col gap-8 sm:gap-5 items-center">
+      <div className="flex justify-center items-center flex-shrink-0">
+        <div className="rounded-full ring-4 ring-neutral-200 dark:ring-neutral-800 overflow-hidden size-48 md:size-48 lg:size-56">
+          <Image
+            src="/images/me.jpg"
+            alt="me"
+            width={512}
+            height={512}
+            className="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-3 sm:bg-muted sm:p-3 rounded-xl w-full max-w-48">
+        {links.map((link) => (
+          <a
+            href={link.url}
+            key={link.name}
+            className={`sm:cursor-none ${link.color} text-white rounded-lg flex flex-row gap-2 px-3 py-2 text-lg font-semibold items-center`}
+          >
+            {link.icon} {link.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function About() {
   return (
     <>
       <div className="flex flex-col sm:flex-row justify-between items-start gap-6 sm:gap-3">
-        <div className="flex flex-col gap-3">
+        <div className="order-2 sm:order-1 flex flex-col gap-3">
           <h2 className="text-3xl font-bold">Hi, I'm Alexandros 👋</h2>
 
           <p className="text-lg font-semibold">
@@ -123,30 +153,8 @@ export function About() {
           </div>
         </div>
 
-        <div className="flex flex-row sm:flex-col gap-8 sm:gap-5 items-center">
-          <div className="flex justify-center items-center flex-shrink-0">
-            <div className="rounded-full ring-4 ring-neutral-200 dark:ring-neutral-800 overflow-hidden size-48 md:size-48 lg:size-56">
-              <Image
-                src="/images/me.jpg"
-                alt="me"
-                width={512}
-                height={512}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-3 sm:bg-muted sm:p-3 rounded-xl w-full max-w-48">
-            {links.map((link) => (
-              <a
-                href={link.url}
-                key={link.name}
-                className={`sm:cursor-none ${link.color} text-white rounded-lg flex flex-row gap-2 px-3 py-2 text-lg font-semibold items-center`}
-              >
-                {link.icon} {link.name}
-              </a>
-            ))}
-          </div>
+        <div className="order-1 sm:order-2">
+          <ProfileSection />
         </div>
       </div>
     </>
