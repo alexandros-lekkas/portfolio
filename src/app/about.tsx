@@ -40,7 +40,7 @@ const experiences = [
     name: "Affiliate Marketer (L5/5)",
     company: "HagoBuy",
     description: [
-      "Generated over $150,000 in just 3 months, significantly expanding the platform’s presence in Greece.",
+      "Generated over $150,000 in just 3 months, significantly expanding the platform's presence in Greece.",
       "Acquired over 5,500 users through data-driven marketing and content creation strategies, leveraging insights to drive successful campaigns.",
     ],
     startDate: "Nov 2023",
@@ -52,7 +52,7 @@ const experiences = [
     company: "efood",
     description: [
       "Developed an AI recipe generator using Next.js and OpenAI's API, collaborating closely with the Frontend Team lead to refine web development skills and integrate project features effectively.",
-      "Awarded the internship after winning the 2022 StCatsHacks Hackathon, where I built the original AI recipe generator that utilized users’ leftovers.",
+      "Awarded the internship after winning the 2022 StCatsHacks Hackathon, where I built the original AI recipe generator that utilized users' leftovers.",
     ],
     startDate: "Jul 2024",
     endDate: "Aug 2024",
@@ -114,7 +114,7 @@ export function About() {
                     </div>
                     <p className="text-sm text-muted-foreground">{experience.company}</p>
                     <p className="text-sm mt-2">{experience.description.map((desc, index) => (
-                      <p key={index} className="mb-2">• {desc}</p>
+                      <span key={index} className="block mb-2">• {desc}</span>
                     ))}</p>
                   </div>
                 </div>
