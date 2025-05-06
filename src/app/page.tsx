@@ -28,7 +28,7 @@ export default function Page() {
   return (
     <div
       className={cn(
-        "relative h-screen w-screen overflow-hidden",
+        "fixed inset-0 h-screen w-screen overflow-hidden touch-none",
         `bg-${background}`
       )}
     >
