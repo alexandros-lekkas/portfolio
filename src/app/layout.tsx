@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { Figtree } from "next/font/google";
 
 import { ThemeProvider } from "@/lib/providers/theme-provider";
-
 import { ClientPointer } from "@/components/client-pointer";
 
 import "./globals.css";
@@ -60,7 +59,8 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             {children}
           </ThemeProvider>
-          
+
+        
           <ClientPointer />
         </main>
       </body>

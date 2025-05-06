@@ -27,11 +27,21 @@ export function Pointer({
 }: PointerProps): JSX.Element {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const [isActive, setIsActive] = useState<boolean>(false);
+  const [isActive, setIsActive] = useState<boolean>(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined" && containerRef.current) {
+      // Initialize mouse position to center of screen
+      const initializeMousePosition = () => {
+        if (window) {
+          x.set(window.innerWidth / 2);
+          y.set(window.innerHeight / 2);
+        }
+      };
+      
+      initializeMousePosition();
+
       // Get the parent element directly from the ref
       const parentElement = containerRef.current.parentElement;
 
@@ -53,13 +63,14 @@ export function Pointer({
           setIsActive(false);
         };
 
-        parentElement.addEventListener("mousemove", handleMouseMove);
+        // Listen for mouse move on the whole document
+        document.addEventListener("mousemove", handleMouseMove);
         parentElement.addEventListener("mouseenter", handleMouseEnter);
         parentElement.addEventListener("mouseleave", handleMouseLeave);
 
         return () => {
           parentElement.style.cursor = "";
-          parentElement.removeEventListener("mousemove", handleMouseMove);
+          document.removeEventListener("mousemove", handleMouseMove);
           parentElement.removeEventListener("mouseenter", handleMouseEnter);
           parentElement.removeEventListener("mouseleave", handleMouseLeave);
         };

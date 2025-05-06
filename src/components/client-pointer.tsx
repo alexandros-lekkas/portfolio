@@ -19,7 +19,9 @@ export function ClientPointer() {
     window.addEventListener("resize", checkIfMobile);
 
     // Cleanup
-    return () => window.removeEventListener("resize", checkIfMobile);
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
   }, []);
 
   // Only render Pointer on non-mobile devices

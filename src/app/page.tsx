@@ -8,13 +8,11 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { About } from "./about";
 import { Projects } from "./projects";
-import { Contact } from "./contact";
 import { Settings } from "./settings";
 
 const tabs = [
   { name: "About", component: <About /> },
   { name: "Projects", component: <Projects /> },
-  { name: "Contact", component: <Contact /> },
   { name: "Settings", component: <Settings /> },
 ];
 
