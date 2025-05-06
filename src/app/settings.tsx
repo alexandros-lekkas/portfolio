@@ -11,7 +11,7 @@ export function Settings() {
 
   return (
     <>
-      <h2 className="text-3xl font-bold">Settings</h2>
+      <h2 className="text-3xl font-bold">Settings 🔧</h2>
 
       <div className="flex flex-wrap gap-6">
         <div className="flex flex-col p-3 items-center justify-center min-w-36 gap-3 bg-muted rounded-lg">

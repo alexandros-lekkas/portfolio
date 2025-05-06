@@ -8,11 +8,13 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { About } from "./about";
 import { Projects } from "./projects";
+import { Contact } from "./contact";
 import { Settings } from "./settings";
 
 const tabs = [
   { name: "About", component: <About /> },
   { name: "Projects", component: <Projects /> },
+  { name: "Contact", component: <Contact /> },
   { name: "Settings", component: <Settings /> },
 ];
 
@@ -33,7 +35,7 @@ export default function Page() {
       )}
     >
       <div className="flex h-full w-full items-center justify-center p-4">
-        <div className="rounded-2xl bg-background backdrop-blur-lg shadow-2xl w-full sm:max-w-2xl lg:max-w-[55vw] h-full max-h-[65vh] sm:max-h-96 lg:max-h-[65vh] overflow-hidden ring-4 dark:ring-neutral-700 ring-slate-700 dark:hover:ring-neutral-600 hover:ring-slate-500 transition-all duration-300">
+        <div className="animate-in fade-in zoom-in-95 rounded-2xl bg-background backdrop-blur-lg shadow-2xl w-full sm:max-w-2xl lg:max-w-[55vw] h-full max-h-[65vh] sm:max-h-96 lg:max-h-[65vh] overflow-hidden ring-4 dark:ring-neutral-700 ring-slate-700 dark:hover:ring-neutral-600 hover:ring-slate-500 transition-all duration-300">
           <div className="bg-muted pt-3 px-3 gap-2 flex flex-row">
             <div className="size-4 rounded-full bg-red-400" />
             <div className="size-4 rounded-full bg-yellow-400" />
@@ -46,7 +48,7 @@ export default function Page() {
                 className={cn(
                   "bg-background px-3 py-1 rounded-lg font-medium transition-all duration-300",
                   activeTab.name === tab.name &&
-                    "bg-primary text-primary-foreground"
+                  "bg-primary text-primary-foreground"
                 )}
                 onClick={() => setActiveTab(tab)}
               >

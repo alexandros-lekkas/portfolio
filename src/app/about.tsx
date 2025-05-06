@@ -1,20 +1,5 @@
 import Image from "next/image";
 
-import { GithubIcon, LinkedinIcon } from "lucide-react";
-
-const links = [
-  {
-    name: "LinkedIn",
-    icon: <LinkedinIcon />,
-    url: "https://www.linkedin.com/in/alexandros-lekkas/",
-  },
-  {
-    name: "GitHub",
-    icon: <GithubIcon />,
-    url: "https://github.com/alexandros-lekkas",
-  },
-];
-
 const skills = [
   "Java",
   "Python",
@@ -40,21 +25,7 @@ export function About() {
     <>
       <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-3">
         <div className="flex flex-col gap-3">
-          <div className="flex flex-row gap-4">
           <h2 className="text-3xl font-bold">Hi, I'm Alexandros 👋</h2>
-
-          <div className="flex flex-wrap gap-2">
-            {links.map((link) => (
-              <a
-                href={link.url}
-                key={link.name}
-                className="sm:cursor-none bg-foreground dark:bg-neutral-800 p-2 text-background dark:text-neutral-300 rounded-lg"
-              >
-                {link.icon}
-              </a>
-            ))}
-          </div>
-          </div>
 
           <p className="text-lg font-semibold">
             Computer Science @ University of Chicago | Aspiring Entrepreneur &
