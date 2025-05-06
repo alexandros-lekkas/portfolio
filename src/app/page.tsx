@@ -39,6 +39,7 @@ export default function Page() {
             <div className="size-4 rounded-full bg-yellow-400" />
             <div className="size-4 rounded-full bg-green-400" />
           </div>
+          
           <div className="bg-muted p-3 flex flex-row gap-3">
             {tabs.map((tab) => (
               <div
@@ -46,7 +47,7 @@ export default function Page() {
                 className={cn(
                   "bg-background px-3 py-1 rounded-lg font-medium transition-all duration-300",
                   activeTab.name === tab.name &&
-                  "bg-primary text-primary-foreground"
+                  "bg-slate-800 dark:bg-primary text-primary-foreground"
                 )}
                 onClick={() => setActiveTab(tab)}
               >
