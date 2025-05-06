@@ -28,7 +28,7 @@ export default function Page() {
   return (
     <div
       className={cn(
-        "fixed inset-0 h-screen w-screen overflow-hidden touch-none",
+        "fixed inset-0 h-screen w-screen overflow-hidden touch-none overflow-y-hidden scrollbar-none",
         `bg-${background}`
       )}
     >
@@ -39,7 +39,7 @@ export default function Page() {
             <div className="size-4 rounded-full bg-yellow-400" />
             <div className="size-4 rounded-full bg-green-400" />
           </div>
-          
+
           <div className="bg-muted p-3 flex flex-row gap-3">
             {tabs.map((tab) => (
               <div
